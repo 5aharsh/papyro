@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Request, HTTPException, status
 from fastapi.staticfiles import StaticFiles
-from papyro.routers import blog
+from papyro.routers import content
 from papyro.services import content_service
 
 from papyro.utils.config import get_theme_path, load_config, KEY_TITLE, validate_content_dir, ContentDirectoryError
@@ -57,7 +57,7 @@ async def check_content_dir_middleware(request: Request, call_next):
 theme_dir = get_theme_path()
 app.mount("/static", StaticFiles(directory=theme_dir), name="static")
 
-app.include_router(blog.router)
+app.include_router(content.router)
 
 @app.get("/")
 async def root(request: Request):
