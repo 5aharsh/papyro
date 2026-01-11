@@ -1,0 +1,23 @@
+[project]
+name = "papyro"
+version = "0.1.0"
+description = "Papyro"
+authors = [
+    {name = "Saharsh Anand (@5aharsh)"}
+]
+readme = "README.md"
+requires-python = "^3.10"
+dependencies = [
+    "fastapi (>=0.128.0,<0.129.0)",
+    "uvicorn (>=0.40.0,<0.41.0)",
+    "jinja2 (>=3.1.6,<4.0.0)",
+    "markdown (>=3.10,<4.0)",
+    "python-frontmatter (>=1.1.0,<2.0.0)",
+    "pymdown-extensions (>=10.20,<11.0)",
+    "python-dotenv (>=1.2.1,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

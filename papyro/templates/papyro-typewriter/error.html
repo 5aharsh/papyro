@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ error_title or "Error" }}{% endblock %}
+
+{% block content %}
+<div class="error-container"
+    style="text-align: left; padding: 20px; font-family: var(--font-mono); border: 2px solid var(--border-color);">
+    <h1 style="border-bottom: 2px solid var(--border-color); padding-bottom: 10px;">[{{ error_title | upper or
+        "SYSTEM_ERROR" }}]</h1>
+    <div style="background: #000; color: #0f0; padding: 15px; border: 1px solid var(--border-color); margin: 20px 0;">
+        > REASON: {{ error_message }}<br>
+        > STATUS: ABORTED
+    </div>
+    <p>
+        <a href="/" style="color: var(--accent-color); font-weight: bold;">[ RETURN_TO_ROOT ]</a>
+    </p>
+    <p style="margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 10px; font-size: 0.8rem;">
+        PAPYRO_VERSION: 0.1.0<br>
+        TIMESTAMP: {{ request.state.timestamp if request.state.timestamp else "N/A" }}
+    </p>
+</div>
+{% endblock %}

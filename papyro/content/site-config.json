@@ -1,0 +1,8 @@
+{
+    "title": "My Papyro Blog",
+    "theme": "papyro-default",
+    "nav_order": [
+        "about",
+        "github"
+    ]
+}

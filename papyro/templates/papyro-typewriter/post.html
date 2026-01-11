@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ post.title }} - Papyro{% endblock %}
+
+{% block content %}
+<article>
+    <header>
+        <h1>{{ post.title }}</h1>
+        <p>Published on {{ post.date }}</p>
+    </header>
+    <div class="content">
+        {{ post.html_content | safe }}
+    </div>
+</article>
+{% endblock %}

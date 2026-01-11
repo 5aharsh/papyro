@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ error_title or "Error" }}{% endblock %}
+
+{% block content %}
+<div class="error-container" style="text-align: center; padding: 50px 20px;">
+    <h1 style="color: #e74c3c; font-size: 3rem; margin-bottom: 20px;">{{ error_title or "Oops!" }}</h1>
+    <div
+        style="background: #fdf2f2; border: 1px solid #fbd5d5; color: #9b1c1c; padding: 20px; border-radius: 8px; margin: 30px auto; max-width: 600px; font-family: var(--font-mono);">
+        <strong>Details:</strong><br>
+        {{ error_message }}
+    </div>
+    <p style="margin-top: 30px;">
+        <a href="/"
+            style="display: inline-block; padding: 10px 20px; background: var(--accent-color); color: white; text-decoration: none; border-radius: 5px;">Return
+            Home</a>
+    </p>
+</div>
+{% endblock %}

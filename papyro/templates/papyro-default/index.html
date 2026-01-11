@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="hero">
+    <h2>Welcome to {{ config.title }}</h2>
+    <p>This is a very basic CMS built with FastAPI and Jinja2.</p>
+</div>
+
+<h3>Recent Posts</h3>
+<ul class="post-list">
+    {% for post in posts %}
+    <li>
+        <h2><a href="/post/{{ post.slug }}">{{ post.title }}</a></h2>
+        <span class="meta">Published on {{ post.date }}</span>
+        <p>{{ post.description }}</p>
+    </li>
+    {% else %}
+    <li>No posts found.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
