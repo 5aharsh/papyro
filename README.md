@@ -2,6 +2,9 @@
 
 A modern, lightweight, flat-file CMS built for speed and simplicity using FastAPI and Python.
 
+![Papyro](image/site-image.png)
+
+
 ## 🚀 Features
 
 -   **Flat-file Storage**: No database required. Your content lives in Markdown files.
